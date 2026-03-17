@@ -6,11 +6,14 @@
 </head>
 <body>
 <script>
-    let nota1 = parseFloat(prompt("Nota del primer trimestre"));
-    let nota2 = parseFloat(prompt("Nota del segundo trimestre:"));
-    let nota3 = parseFloat(prompt("Nota del tercer trimestre:"));
+    let nota1 = prompt("Nota del primer trimestre");
+    let nota2 = prompt("Nota del segundo trimestre:");
+    let nota3 = prompt("Nota del tercer trimestre:");
+    nota1=parseFloat(nota1);
+    nota2=parseFloat(nota2);
+    nota3=parseFloat(nota3);
+    promedio=parseFloat(promedio);
     let promedio = (nota1 + nota2 + nota3) / 3;
-    
     if (promedio >= 4.5) {
         alert("Apto. Has aprobado con una media de: " + promedio);
     } else {
