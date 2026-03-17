@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Evaluación de estudiante</title>
+</head>
+<body>
+
+<h2>Evaluación final del estudiante</h2>
+
+<script>
+    let nota1 = parseFloat(prompt("Nota del primer trimestre"));
+    let nota2 = parseFloat(prompt("Nota del segundo trimestre:"));
+    let nota3 = parseFloat(prompt("Nota del tercer trimestre:"));
+    let promedio = (nota1 + nota2 + nota3) / 3;
+    alert("La media es: " + promedio);
+
+    // Estructura condicional
+    if (promedio >= 4.5) {
+        alert("Apto. Has aprobado con una media de: " + promedio);
+    } else {
+        alert("No apto. Has suspendido con una media de: " + promedio);
+    }
+</script>
+
+</body>
+</html>
