@@ -6,47 +6,54 @@
 </head>
 <body>
 <h1>Ejercicio 07 — Introducción de datos y toma de decisiones</h1>
-<p>En este ejercicio se trabaja con preguntas al usuario y estructuras condicionales para tomar decisiones según la respuesta.</p>
+<p>Este programa pregunta al usuario si quiere jugar. 
+    Si responde que sí, le pregunta por una fruta y muestra su precio usando un <code>switch</code>. 
+    Luego hace otra consulta para saber si desea continuar y termina con un mensaje adecuado. 
+    Si el usuario no quiere jugar o escribe una respuesta inválida, muestra un mensaje correspondiente.</p>
 <script>
-  let jugar = prompt("Este programa funciona tomando decisiones. ¿Quieres jugar? Responde con s si es que sí o con n si es que no");
-
-    if (jugar == "s") {
-
-        var fruta = prompt("Introduce el nombre de una fruta que desees con la primera letra en mayúscula");
-
-        switch (fruta) {
-          case 'Naranjas':
-            alert('El kilogramo de naranjas cuesta $0.59.');
-            break;
-          case 'Manzanas':
+let jugar = prompt("Este programa funciona tomando decisiones. ¿Quieres jugar? Responde con s si es que sí o con n si es que no");
+if (jugar == "s") {
+let fruta = prompt("Introduce el nombre de una fruta que desees con la primera letra en mayúscula");
+switch (fruta) {
+case 'Naranjas':
+alert('El kilogramo de naranjas cuesta $0.59.');
+  break;
+        case 'Manzanas':
             alert('El kilogramo de manzanas cuesta $0.32.');
             break;
-          case 'Platanos':
+        case 'Platanos':
             alert('El kilogramo de plátanos cuesta $0.48.');
             break;
-          case 'Cerezas':
+        case 'Cerezas':
             alert('El kilogramo de cerezas cuesta $3.00.');
             break;
-          case 'Mangos':
-          case 'Papayas':
+        case 'Mangos':
+        case 'Papayas':
             alert('El kilogramo de mangos y papayas cuesta $2.79.');
             break;
-          default:
+        case 'Peras':
+            alert('El kilogramo de peras cuesta $0.75.');
+            break;
+        case 'Kiwis':
+            alert('El kilogramo de kiwis cuesta $1.20.');
+            break;
+        default:
             alert('Lo lamentamos, por el momento no disponemos de ' + fruta + '.');
-        }
-
-        var respuesta = prompt("¿Hay algo más que quieras consultar? Responde si o no");
-
-        if (respuesta == "si") {
-            alert("No tenemos tiempo para responderte en este momento. Gracias.");
-        } else {
-            alert("Muchas gracias por tu consulta.");
-        }
-
-    } else {
-
-        alert("Es una pena que no quieras participar. Quizás para la siguiente.");
     }
+    let respuesta = prompt("¿Hay algo más que quieras consultar? Responde si o no");
+     if (respuesta == "si") {
+        alert("No tenemos tiempo para responderte en este momento. Gracias.");
+    } else if (respuesta == "no") {
+        alert("Muchas gracias por tu consulta.");
+    } else {
+        alert("Por favor, introduce una respuesta correcta (si o no).");
+    }
+
+} else if (jugar == "n") {
+    alert("Es una pena que no quieras participar. Quizás para la siguiente.");
+} else {
+    alert("Por favor, introduce una respuesta correcta (s o n).");
+}
 </script>
 </body>
 </html>
