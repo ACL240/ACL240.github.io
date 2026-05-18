@@ -7,9 +7,9 @@
 <body>
 <h1>Ejercicio 07 — Introducción de datos y toma de decisiones</h1>
 <p>Este programa pregunta al usuario si quiere jugar. 
-    Si responde que sí, le pregunta por una fruta y muestra su precio usando un <code>switch</code>. 
-    Luego hace otra consulta para saber si desea continuar y termina con un mensaje adecuado. 
-    Si el usuario no quiere jugar o escribe una respuesta inválida, muestra un mensaje correspondiente.</p>
+    Si responde que sí, le pregunta por una fruta. Si el jugador elige una fruta que no esté en la lista, da error. Muestra su precio usando un <code>switch</code>. 
+    Luego hace otra pregunta para saber si desea continuar. Si no, termina el programa. 
+    Si el usuario no quiere jugar o escribe una respuesta inválida, sale un mensaje de error.</p>
 <script>
 let jugar = prompt("Este programa funciona tomando decisiones. ¿Quieres jugar? Responde con s si es que sí o con n si es que no");
 if (jugar == "s") {
@@ -29,7 +29,7 @@ alert('El kilogramo de naranjas cuesta $0.59.');
             break;
         case 'Mangos':
         case 'Papayas':
-            alert('El kilogramo de mangos y papayas cuesta $2.79.');
+            alert('El kilogramo de mangos y papayas cuesta $1.79.');
             break;
         case 'Pera':
             alert('El kilogramo de peras cuesta $0.75.');
@@ -42,7 +42,7 @@ alert('El kilogramo de naranjas cuesta $0.59.');
     }
     let respuesta = prompt("¿Hay algo más que quieras consultar? Responde si o no");
      if (respuesta == "si") {
-        alert("No tenemos tiempo para responderte en este momento. Gracias.");
+        alert("No se aceptan preguntas. Gracias.");
     } else if (respuesta == "no") {
         alert("Muchas gracias por tu consulta.");
     } else {
