@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Ejercicio 12 — Inputs y HTML dinámico</title>
+ <style>
+.caja {
+border: 2px solid black;
+padding: 10px;
+margin: 10px;
+}
+    </style>
+</head>
+<body>
+
+<h1>Ejercicio 12 — Inputs y HTML dinámico</h1>
+<h2>Saludo</h2>
+<input type="text" id="nombre">
+<button onclick="saludar()">Saludar</button>
+<div id="resultadoSaludo" class="caja"></div>
+<hr>
+<h2>Suma de números</h2>
+<input type="number" id="numero1">
+  <input type="number" id="numero2">
+    <button onclick="sumar()">Sumar</button>
+    <div id="resultadoSuma" class="caja"></div>
+<hr>
+<h2>Mayoría de edad</h2>
+<input type="number" id="edad">
+  <button onclick="comprobarEdad()">Comprobar edad</button>
+  <div id="resultadoEdad" class="caja"></div>
+<hr>
+<h2>Append</h2>
+    <button onclick="agregarMensaje()">Añadir mensaje</button>
+    <div id="resultadoAppend" class="caja"></div>
+
+   <hr>
+    <h2>Área de un cuadrado</h2>
+    <input type="number" id="base" placeholder="Base">
+    <input type="number" id="altura" placeholder="Altura">
+    <button onclick="calcularArea()">Calcular área</button>
+    <div id="resultadoArea" class="caja"></div>
+<script>
+        function saludar() {
+            let nombre = document.getElementById("nombre").value;
+            let resultado = document.getElementById("resultadoSaludo");
+            resultado.innerHTML = "<h2>Hola " + nombre + "</h2>";
+        }
+        function sumar() {
+            let numero1 = Number(document.getElementById("numero1").value);
+            let numero2 = Number(document.getElementById("numero2").value);
+            let suma = numero1 + numero2;
+            let resultado = document.getElementById("resultadoSuma");
+            resultado.innerHTML = "<p>La suma es: " + suma + "</p>";
+        }
+        function comprobarEdad() {
+            let edad = Number(document.getElementById("edad").value);
+            let resultado = document.getElementById("resultadoEdad");
+            if (edad >= 18) {
+                resultado.innerHTML = "<p>Es mayor de edad</p>";
+            } else {
+                resultado.innerHTML = "<p>Es menor de edad</p>";
+            }
+        }
+        function agregarMensaje() {
+            let caja = document.getElementById("resultadoAppend");
+            caja.append(" Nuevo mensaje añadido ");
+        }
+        function calcularArea() {
+            let base = Number(document.getElementById("base").value);
+            let altura = Number(document.getElementById("altura").value);
+            let area = base * altura;
+            let resultado = document.getElementById("resultadoArea");
+            resultado.innerHTML = "<p>El área del rectángulo es: " + area + "</p>";
+        }
+    </script>
+</body>
+</html>
